@@ -19,7 +19,7 @@ document.addEventListener("keypress",(e) => {
 document.addEventListener("touchstart",() => {
     if(!start) {
         start = true;
-        levelUp();
+        setTimeout(levelUp,1000);
     }
 })
 
