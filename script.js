@@ -13,7 +13,7 @@ document.addEventListener("keypress",(e) => {
     e.preventDefault()
     if(!start) {
         start = true;
-        levelUp();
+        setTimeout(levelUp,1000);
     }
 })
 document.addEventListener("touchstart",() => {
@@ -38,13 +38,13 @@ function btnflash(btn) {
     btn.classList.add("flash");
     setTimeout(function(){
         btn.classList.remove("flash");
-    },150)
+    },180)
 }
 function userflash(btn) {
     btn.classList.add("userflash");
     setTimeout(function(){
         btn.classList.remove("userflash");
-    },150)
+    },180)
 }
 function btnPress() {
     if(!start) return;
@@ -72,7 +72,7 @@ function check(idx) {
         body.classList.add("bodyflash");
         setTimeout(()=>{
             body.classList.remove("bodyflash")
-        },150)
+        },180)
         maxLevel = Math.max(level-1,maxLevel);
         let score = document.querySelector('#score');
         score.innerText = `${maxLevel}`
