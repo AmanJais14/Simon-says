@@ -15,11 +15,17 @@ document.addEventListener("keypress",() => {
         levelUp();
     }
 })
+document.addEventListener("touchstart",() => {
+    if(!start) {
+        start = true;
+        levelUp();
+    }
+})
 
 function levelUp() {
     level++;
     h2.innerText = `Level ${level}`
-    let i = Math.floor(Math.random() * 3);
+    let i = Math.floor(Math.random() * 4);
     let rndmColor = color[i];
     let rndmBtn = document.querySelector(`.${rndmColor}`);
     gameSeq.push(rndmColor);
@@ -48,7 +54,7 @@ function btnPress() {
     check(userSeq.length-1);
 }
 
-let allBtns = document.querySelectorAll("button");
+let allBtns = document.querySelectorAll(".button");
 for (btn of allBtns) {
         btn.addEventListener("click",btnPress)
 }
@@ -71,7 +77,7 @@ function check(idx) {
         score.innerText = `${maxLevel}`
         gameSeq = []
         userSeq = []
-        h2.innerText = `Your score was ${level-1}. Press any key to start !`
+        h3.innerHTML = `Your score was ${level-1}.<br> Press any key to start !`
         start = false;
         level = 0
     }
