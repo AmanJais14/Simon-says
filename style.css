@@ -1,0 +1,40 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+button {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10%;
+    margin: 10px;
+    border: 3px solid black;
+
+}
+.container{
+    text-align: center;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: rgb(23, 190, 23);
+}
+.purple {
+    background-color: purple;
+}
+.yellow{
+    background-color: yellow;
+}
+.flash {
+    background-color: white;
+}
+.userflash {
+    background-color: green;
+}
+#score{
+    margin-bottom: 15px;
+}
+.bodyflash {
+    background-color: rgb(1, 23, 1);
+}
