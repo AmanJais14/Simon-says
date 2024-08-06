@@ -7,9 +7,10 @@ let userSeq = [];
 
 
 let color = ['red','yellow','purple','green'];
-let h2 = document.querySelector("h2")
+let h2 = document.querySelector("h3")
 
-document.addEventListener("keypress",() => {
+document.addEventListener("keypress",(e) => {
+    e.preventDefault()
     if(!start) {
         start = true;
         levelUp();
@@ -77,7 +78,7 @@ function check(idx) {
         score.innerText = `${maxLevel}`
         gameSeq = []
         userSeq = []
-        h3.innerHTML = `Your score was ${level-1}.<br> Press any key to start !`
+        h2.innerHTML = `Your score was ${level-1}.<br> Press any key to start !`
         start = false;
         level = 0
     }
